@@ -1,28 +1,46 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
-import { Variant } from '../../common/VariantEnum';
+import { computed, defineProps, PropType } from 'vue';
+import { Variant } from "../../common/VariantEnum.ts";
 
-defineProps({
+const props = defineProps({
   label: {
     type: String,
     default: '',
   },
   variant: {
-    type: Variant,
+    type: String as PropType<Variant>,
     default: Variant.Primary,
+  },
+  outline: {
+    type: Boolean,
+    default: false,
+  },
+})
+
+const classes = computed(() => {
+  const result = ['v-button'];
+
+  if (!props.outline) {
+    result.push(`v-button--${props.variant}`);
+  } else {
+    result.push(`v-button--${props.variant}--outline`);
   }
+
+  return result.join(' ');
 })
 </script>
 
 <template>
-  <button class="v-button" :class="`v-button--${variant}`">
+  <button class="v-button" :class="classes">
     <slot></slot>
   </button>
 </template>
 
 <style lang="scss">
-.v-button {
+@use "src/style/variables" as variables;
+@use "../../style/mixins" as mixins;
 
+.v-button {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -34,53 +52,52 @@ defineProps({
 }
 
 .v-button--primary {
-  background-color: #a242b8;
-  color: white;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  @include mixins.button-solid(variables.$primary-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
-
 .v-button--secondary {
-  background-color: #35495e;
-  color: white;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  @include mixins.button-solid(variables.$secondary-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
-
 .v-button--success {
-  background-color: #42b883;
-  color: white;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  @include mixins.button-solid(variables.$success-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
 .v-button--danger {
-  background-color: #f85032;
-  color: white;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  @include mixins.button-solid(variables.$danger-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
 .v-button--warning {
-  background-color: #ffc107;
-  color: white;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  @include mixins.button-solid(variables.$warning-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
 .v-button--info {
-  background-color: #17a2b8;
-  color: white;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  @include mixins.button-solid(variables.$info-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
 .v-button--light {
-  background-color: #f8f9fa;
-  color: black;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  @include mixins.button-solid(variables.$light-color, variables.$black-color, variables.$border-radius, variables.$transparent-color);
 }
 .v-button--dark {
-  background-color: #343a40;
-  color: white;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  @include mixins.button-solid(variables.$dark-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
+}
+
+.v-button--primary--outline {
+  @include mixins.button-outline(variables.$primary-color, variables.$border-radius);
+}
+.v-button--secondary--outline {
+  @include mixins.button-outline(variables.$secondary-color, variables.$border-radius);
+}
+.v-button--success--outline {
+  @include mixins.button-outline(variables.$success-color, variables.$border-radius);
+}
+.v-button--danger--outline {
+  @include mixins.button-outline(variables.$danger-color, variables.$border-radius);
+}
+.v-button--warning--outline {
+  @include mixins.button-outline(variables.$warning-color, variables.$border-radius);
+}
+.v-button--info--outline {
+  @include mixins.button-outline(variables.$info-color, variables.$border-radius);
+}
+.v-button--light--outline {
+  @include mixins.button-outline(variables.$light-color, variables.$border-radius);
+}
+.v-button--dark--outline {
+  @include mixins.button-outline(variables.$dark-color, variables.$border-radius);
 }
 </style>

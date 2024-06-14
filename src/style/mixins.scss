@@ -1,0 +1,33 @@
+@mixin button-solid($bg-color, $text-color, $border-radius, $border-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+    border: 1px solid darken($border-color, 10%);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+@mixin button-outline($color, $border-radius) {
+  background-color: transparent;
+  color: $color;
+  border-radius: $border-radius;
+  border: 1px solid $color;
+
+  &:hover {
+    background-color: $color;
+    color: white;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
