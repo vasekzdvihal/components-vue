@@ -1,106 +1,108 @@
-.roboto-thin {
-  font-family: "Roboto", sans-serif;
+@use 'src/style/variables' as variables;
+
+.text-thin {
+  font-family: variables.$font-family;
   font-weight: 100;
   font-style: normal;
 }
 
-.roboto-light {
-  font-family: "Roboto", sans-serif;
+.text-light {
+  font-family: variables.$font-family;
   font-weight: 300;
   font-style: normal;
 }
 
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
+.text-regular {
+  font-family: variables.$font-family;
   font-weight: 400;
   font-style: normal;
 }
 
-.roboto-medium {
-  font-family: "Roboto", sans-serif;
+.text-medium {
+  font-family: variables.$font-family;
   font-weight: 500;
   font-style: normal;
 }
 
-.roboto-bold {
-  font-family: "Roboto", sans-serif;
+.text-bold {
+  font-family: variables.$font-family;
   font-weight: 700;
   font-style: normal;
 }
 
-.roboto-black {
-  font-family: "Roboto", sans-serif;
+.text-black {
+  font-family: variables.$font-family;
   font-weight: 900;
   font-style: normal;
 }
 
-.roboto-thin-italic {
-  font-family: "Roboto", sans-serif;
+.text-thin-italic {
+  font-family: variables.$font-family;
   font-weight: 100;
   font-style: italic;
 }
 
-.roboto-light-italic {
-  font-family: "Roboto", sans-serif;
+.text-light-italic {
+  font-family: variables.$font-family;
   font-weight: 300;
   font-style: italic;
 }
 
-.roboto-regular-italic {
-  font-family: "Roboto", sans-serif;
+.text-regular-italic {
+  font-family: variables.$font-family;
   font-weight: 400;
   font-style: italic;
 }
 
-.roboto-medium-italic {
-  font-family: "Roboto", sans-serif;
+.text-medium-italic {
+  font-family: variables.$font-family;
   font-weight: 500;
   font-style: italic;
 }
 
-.roboto-bold-italic {
-  font-family: "Roboto", sans-serif;
+.text-bold-italic {
+  font-family: variables.$font-family;
   font-weight: 700;
   font-style: italic;
 }
 
-.roboto-black-italic {
-  font-family: "Roboto", sans-serif;
+.text-black-italic {
+  font-family: variables.$font-family;
   font-weight: 900;
   font-style: italic;
 }
 
 h1 {
-  @extend .roboto-black;
-  font-size: 2.5rem;
+  @extend .text-black;
+  font-size: 3rem;
 }
 
 h2 {
-  @extend .roboto-bold;
-  font-size: 2rem;
+  @extend .text-bold;
+  font-size: 2.5rem;
 }
 
 h3 {
-  @extend .roboto-medium;
+  @extend .text-medium;
   font-size: 1.75rem;
 }
 
 h4 {
-  @extend .roboto-regular;
+  @extend .text-regular;
   font-size: 1.5rem;
 }
 
 h5 {
-  @extend .roboto-regular;
+  @extend .text-regular;
   font-size: 1.25rem;
 }
 
 h6 {
-  @extend .roboto-regular;
+  @extend .text-regular;
   font-size: 1rem;
 }
 
 p {
-  @extend .roboto-regular;
+  @extend .text-regular;
   font-size: 1rem;
 }

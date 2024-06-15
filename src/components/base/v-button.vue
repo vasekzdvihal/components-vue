@@ -38,7 +38,7 @@ const classes = computed(() => {
 @use "../../style/typography";
 
 .v-button {
-  @extend .roboto-bold;
+  @extend .text-bold;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;

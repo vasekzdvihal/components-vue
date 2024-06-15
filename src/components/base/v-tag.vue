@@ -28,7 +28,7 @@ const classes = computed(() => {
 @use "../../style/typography";
 
 .v-tag {
-  @extend .roboto-medium;
+  @extend .text-medium;
   padding: 5px 10px;
   border-radius: 5px;
   display: inline-block;
