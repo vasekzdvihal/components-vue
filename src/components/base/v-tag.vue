@@ -25,8 +25,10 @@ const classes = computed(() => {
 <style scoped lang="scss">
 @use "src/style/variables" as variables;
 @use "../../style/mixins" as mixins;
+@use "../../style/typography";
 
 .v-tag {
+  @extend .roboto-medium;
   padding: 5px 10px;
   border-radius: 5px;
   display: inline-block;

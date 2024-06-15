@@ -2,9 +2,11 @@
 import VButton from "./components/base/v-button.vue";
 import { Variant } from "./common/VariantEnum.ts";
 import VTag from "./components/base/v-tag.vue";
+import VIcon from "./components/base/v-icon.vue";
 </script>
 
 <template>
+  <h3>v-button</h3>
   <div class="display-container">
     <v-button>primary</v-button>
     <v-button :variant="Variant.Secondary">secondary</v-button>
@@ -27,6 +29,7 @@ import VTag from "./components/base/v-tag.vue";
     <v-button :variant="Variant.Dark" outline>dark</v-button>
   </div>
 
+  <h3>v-tag</h3>
   <div class="display-container">
     <v-tag>primary</v-tag>
     <v-tag :variant="Variant.Secondary">secondary</v-tag>
@@ -36,6 +39,15 @@ import VTag from "./components/base/v-tag.vue";
     <v-tag :variant="Variant.Info">info</v-tag>
     <v-tag :variant="Variant.Light">light</v-tag>
     <v-tag :variant="Variant.Dark">dark</v-tag>
+  </div>
+
+  <h3>v-icon</h3>
+  <div class="display-container">
+    <v-icon name="home"></v-icon>
+    <v-icon name="settings" size="2rem"></v-icon>
+    <v-icon name="account_circle" size="40px"></v-icon>
+    <v-icon name="notifications" size="2rem"></v-icon>
+    <v-icon name="logout"></v-icon>
   </div>
 </template>
 

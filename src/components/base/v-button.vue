@@ -35,8 +35,10 @@ const classes = computed(() => {
 <style lang="scss">
 @use "src/style/variables" as variables;
 @use "../../style/mixins" as mixins;
+@use "../../style/typography";
 
 .v-button {
+  @extend .roboto-bold;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
