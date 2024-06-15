@@ -3,10 +3,6 @@ import { computed, defineProps, PropType } from 'vue';
 import { Variant } from "../../common/VariantEnum.ts";
 
 const props = defineProps({
-  label: {
-    type: String,
-    default: '',
-  },
   variant: {
     type: String as PropType<Variant>,
     default: Variant.Primary,

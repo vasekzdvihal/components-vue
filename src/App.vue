@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import VButton from "./components/base/v-button.vue";
 import { Variant } from "./common/VariantEnum.ts";
+import VTag from "./components/base/v-tag.vue";
 </script>
 
 <template>
@@ -24,6 +25,17 @@ import { Variant } from "./common/VariantEnum.ts";
     <v-button :variant="Variant.Info" outline>info</v-button>
     <v-button :variant="Variant.Light" outline>light</v-button>
     <v-button :variant="Variant.Dark" outline>dark</v-button>
+  </div>
+
+  <div class="display-container">
+    <v-tag>primary</v-tag>
+    <v-tag :variant="Variant.Secondary">secondary</v-tag>
+    <v-tag :variant="Variant.Success">success</v-tag>
+    <v-tag :variant="Variant.Danger">danger</v-tag>
+    <v-tag :variant="Variant.Warning">warning</v-tag>
+    <v-tag :variant="Variant.Info">info</v-tag>
+    <v-tag :variant="Variant.Light">light</v-tag>
+    <v-tag :variant="Variant.Dark">dark</v-tag>
   </div>
 </template>
 

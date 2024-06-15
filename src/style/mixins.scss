@@ -31,3 +31,9 @@
     outline: 4px auto -webkit-focus-ring-color;
   }
 }
+
+@mixin tag-solid($bg-color, $text-color, $border-radius) {
+  background-color: $bg-color;
+  color: $text-color;
+  border-radius: $border-radius;
+}
