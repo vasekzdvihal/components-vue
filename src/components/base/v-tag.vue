@@ -38,27 +38,27 @@ const classes = computed(() => {
 }
 
 .v-tag--primary {
-  @include mixins.tag-solid(variables.$primary-color, variables.$white-color, variables.$border-radius);
+  @include mixins.solid(variables.$primary-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
 .v-tag--secondary {
-  @include mixins.tag-solid(variables.$secondary-color, variables.$white-color, variables.$border-radius);
+  @include mixins.solid(variables.$secondary-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
 .v-tag--success {
-  @include mixins.tag-solid(variables.$success-color, variables.$white-color, variables.$border-radius);
+  @include mixins.solid(variables.$success-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
 .v-tag--danger {
-  @include mixins.tag-solid(variables.$danger-color, variables.$white-color, variables.$border-radius);
+  @include mixins.solid(variables.$danger-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
 .v-tag--warning {
-  @include mixins.tag-solid(variables.$warning-color, variables.$white-color, variables.$border-radius);
+  @include mixins.solid(variables.$warning-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
 .v-tag--info {
-  @include mixins.tag-solid(variables.$info-color, variables.$white-color, variables.$border-radius);
+  @include mixins.solid(variables.$info-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
 .v-tag--light {
-  @include mixins.tag-solid(variables.$light-color, variables.$dark-color, variables.$border-radius);
+  @include mixins.solid(variables.$light-color, variables.$black-color, variables.$border-radius, variables.$transparent-color);
 }
 .v-tag--dark {
-  @include mixins.tag-solid(variables.$dark-color, variables.$white-color, variables.$border-radius);
+  @include mixins.solid(variables.$dark-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
 </style>

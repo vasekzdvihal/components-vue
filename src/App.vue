@@ -8,25 +8,25 @@ import VIcon from "./components/base/v-icon.vue";
 <template>
   <h3>v-button</h3>
   <div class="display-container">
-    <v-button>primary</v-button>
-    <v-button :variant="Variant.Secondary">secondary</v-button>
-    <v-button :variant="Variant.Success">success</v-button>
-    <v-button :variant="Variant.Danger">danger</v-button>
-    <v-button :variant="Variant.Warning">warning</v-button>
-    <v-button :variant="Variant.Info">info</v-button>
-    <v-button :variant="Variant.Light">light</v-button>
-    <v-button :variant="Variant.Dark">dark</v-button>
+    <v-button :variant="Variant.Primary" label="Primary" icon="home" />
+    <v-button :variant="Variant.Secondary" label="Secondary" icon="home" />
+    <v-button :variant="Variant.Success" label="Success" icon="home" />
+    <v-button :variant="Variant.Danger" label="Danger" icon="home" />
+    <v-button :variant="Variant.Warning" label="Warning" icon="home" />
+    <v-button :variant="Variant.Info" label="Info" icon="home" />
+    <v-button :variant="Variant.Light" label="Light" icon="home" />
+    <v-button :variant="Variant.Dark" label="Dark" icon="home" />
   </div>
 
   <div class="display-container">
-    <v-button outline>primary</v-button>
-    <v-button :variant="Variant.Secondary" outline>secondary</v-button>
-    <v-button :variant="Variant.Success" outline>success</v-button>
-    <v-button :variant="Variant.Danger" outline>danger</v-button>
-    <v-button :variant="Variant.Warning" outline>warning</v-button>
-    <v-button :variant="Variant.Info" outline>info</v-button>
-    <v-button :variant="Variant.Light" outline>light</v-button>
-    <v-button :variant="Variant.Dark" outline>dark</v-button>
+    <v-button :variant="Variant.Primary" outline label="Primary" icon="home" />
+    <v-button :variant="Variant.Secondary" outline label="Secondary" icon="home" />
+    <v-button :variant="Variant.Success" outline label="Success" icon="home" />
+    <v-button :variant="Variant.Danger" outline label="Danger" icon="home" />
+    <v-button :variant="Variant.Warning" outline label="Warning" icon="home" />
+    <v-button :variant="Variant.Info" outline label="Info" icon="home" />
+    <v-button :variant="Variant.Light" outline label="Light" icon="home" />
+    <v-button :variant="Variant.Dark" outline label="Dark" icon="home" />
   </div>
 
   <h3>v-tag</h3>

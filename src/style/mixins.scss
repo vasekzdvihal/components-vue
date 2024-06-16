@@ -1,21 +1,18 @@
-@mixin button-solid($bg-color, $text-color, $border-radius, $border-color) {
+@mixin solid($bg-color, $text-color, $border-radius, $border-color) {
   background-color: $bg-color;
   color: $text-color;
   border-radius: $border-radius;
   border: 1px solid $border-color;
+}
 
+@mixin solid-hover($bg-color, $border-color) {
   &:hover {
     background-color: darken($bg-color, 10%);
     border: 1px solid darken($border-color, 10%);
   }
-
-  &:focus,
-  &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
 }
 
-@mixin button-outline($color, $border-radius) {
+@mixin outline($color, $border-radius) {
   background-color: transparent;
   color: $color;
   border-radius: $border-radius;
@@ -25,15 +22,11 @@
     background-color: $color;
     color: white;
   }
-
-  &:focus,
-  &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
 }
 
-@mixin tag-solid($bg-color, $text-color, $border-radius) {
-  background-color: $bg-color;
-  color: $text-color;
-  border-radius: $border-radius;
+@mixin outline-hover($color, $text-color) {
+  &:hover {
+    background-color: darken($color, 10%);
+    color: $text-color;
+  }
 }
