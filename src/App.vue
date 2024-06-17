@@ -14,8 +14,6 @@ import VIcon from "./components/base/v-icon.vue";
     <v-button :variant="Variant.Danger" label="Danger" icon="home" />
     <v-button :variant="Variant.Warning" label="Warning" icon="home" />
     <v-button :variant="Variant.Info" label="Info" icon="home" />
-    <v-button :variant="Variant.Light" label="Light" icon="home" />
-    <v-button :variant="Variant.Dark" label="Dark" icon="home" />
   </div>
 
   <div class="display-container">
@@ -25,8 +23,6 @@ import VIcon from "./components/base/v-icon.vue";
     <v-button :variant="Variant.Danger" outline label="Danger" icon="home" />
     <v-button :variant="Variant.Warning" outline label="Warning" icon="home" />
     <v-button :variant="Variant.Info" outline label="Info" icon="home" />
-    <v-button :variant="Variant.Light" outline label="Light" icon="home" />
-    <v-button :variant="Variant.Dark" outline label="Dark" icon="home" />
   </div>
 
   <h3>v-tag</h3>
@@ -37,8 +33,6 @@ import VIcon from "./components/base/v-icon.vue";
     <v-tag :variant="Variant.Danger">danger</v-tag>
     <v-tag :variant="Variant.Warning">warning</v-tag>
     <v-tag :variant="Variant.Info">info</v-tag>
-    <v-tag :variant="Variant.Light">light</v-tag>
-    <v-tag :variant="Variant.Dark">dark</v-tag>
   </div>
 
   <h3>v-icon</h3>

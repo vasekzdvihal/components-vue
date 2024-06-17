@@ -29,7 +29,7 @@ const props = defineProps({
 const classes = computed(() => {
   const result = ['v-button'];
 
-  if (props.outline) result.push(`v-button--${props.variant}`);
+  if (props.outline) result.push(`v-button--${props.variant}--outline`);
   if (props.flat) result.push(`v-button--flat`);
   if (!props.outline && !props.flat) result.push(`v-button--${props.variant}`);
 
@@ -95,14 +95,6 @@ const classes = computed(() => {
   @include mixins.solid(variables.$info-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
   @include mixins.solid-hover(variables.$info-color, variables.$transparent-color);
 }
-.v-button--light {
-  @include mixins.solid(variables.$light-color, variables.$black-color, variables.$border-radius, variables.$transparent-color);
-  @include mixins.solid-hover(variables.$light-color, variables.$transparent-color);
-}
-.v-button--dark {
-  @include mixins.solid(variables.$dark-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
-  @include mixins.solid-hover(variables.$dark-color, variables.$transparent-color);
-}
 
 .v-button--primary--outline {
   @include mixins.outline(variables.$primary-color, variables.$border-radius);
@@ -127,13 +119,5 @@ const classes = computed(() => {
 .v-button--info--outline {
   @include mixins.outline(variables.$info-color, variables.$border-radius);
   @include mixins.outline-hover(variables.$info-color, variables.$white-color);
-}
-.v-button--light--outline {
-  @include mixins.outline(variables.$light-color, variables.$border-radius);
-  @include mixins.outline-hover(variables.$light-color, variables.$dark-color);
-}
-.v-button--dark--outline {
-  @include mixins.outline(variables.$dark-color, variables.$border-radius);
-  @include mixins.outline-hover(variables.$dark-color, variables.$white-color);
 }
 </style>

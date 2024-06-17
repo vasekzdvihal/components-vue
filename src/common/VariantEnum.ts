@@ -5,6 +5,4 @@ export enum Variant {
   Danger = 'danger',
   Warning = 'warning',
   Info = 'info',
-  Light = 'light',
-  Dark = 'dark',
 }

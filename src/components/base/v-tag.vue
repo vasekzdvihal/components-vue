@@ -55,10 +55,4 @@ const classes = computed(() => {
 .v-tag--info {
   @include mixins.solid(variables.$info-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
 }
-.v-tag--light {
-  @include mixins.solid(variables.$light-color, variables.$black-color, variables.$border-radius, variables.$transparent-color);
-}
-.v-tag--dark {
-  @include mixins.solid(variables.$dark-color, variables.$white-color, variables.$border-radius, variables.$transparent-color);
-}
 </style>
