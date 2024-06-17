@@ -41,13 +41,8 @@ const classes = computed(() => {
 
 <template>
   <button :class="classes" :aria-label="label">
-    <template v-if="!$slots.default">
-      <slot name="before" />
-      <v-icon v-if="icon" :name="icon" />
-      <span>{{ label }}</span>
-      <slot name="after" />
-    </template>
-    <slot />
+    <span v-if="icon" class="material-symbols-outlined">{{ icon }}</span>
+    <span>{{ label }}</span>
   </button>
 </template>
 

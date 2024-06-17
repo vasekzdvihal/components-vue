@@ -3,6 +3,10 @@ import VButton from "./components/base/v-button.vue";
 import { Variant } from "./common/VariantEnum.ts";
 import VTag from "./components/base/v-tag.vue";
 import VIcon from "./components/base/v-icon.vue";
+import VInput from "./components/base/v-input.vue";
+import { ref } from "vue";
+
+const modelValue = ref("");
 </script>
 
 <template>
@@ -43,6 +47,10 @@ import VIcon from "./components/base/v-icon.vue";
     <v-icon name="notifications" size="2rem"></v-icon>
     <v-icon name="logout"></v-icon>
   </div>
+
+  <h3>v-input</h3>
+  <h4>Model value: {{ modelValue }}</h4>
+  <v-input v-model="modelValue" />
 </template>
 
 <style lang="scss">
