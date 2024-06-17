@@ -40,14 +40,14 @@ const classes = computed(() => {
 </script>
 
 <template>
-  <button :class="classes">
+  <button :class="classes" :aria-label="label">
     <template v-if="!$slots.default">
-      <slot name="before"></slot>
-      <v-icon v-if="icon" :name="icon"></v-icon>
+      <slot name="before" />
+      <v-icon v-if="icon" :name="icon" />
       <span>{{ label }}</span>
-      <slot name="after"></slot>
+      <slot name="after" />
     </template>
-    <slot></slot>
+    <slot />
   </button>
 </template>
 

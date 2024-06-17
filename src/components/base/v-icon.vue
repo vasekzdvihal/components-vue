@@ -20,5 +20,5 @@ const style = computed(() => {
 </script>
 
 <template>
-  <span class="material-symbols-outlined" :style="style">{{ name }}</span>
+  <span class="material-symbols-outlined" role="img" :aria-label="name" :style="style">{{ name }}</span>
 </template>
