@@ -2,11 +2,16 @@
 import { computed } from "vue";
 
 const emit = defineEmits(['update:modelValue']);
+
 defineProps({
-  modelValue: {
+  label: {
     type: String,
     default: '',
   },
+  modelValue: {
+    type: String,
+    default: '',
+  }
 });
 
 function onInput(event: Event) {
@@ -24,20 +29,8 @@ const classes = computed(() => {
 </script>
 
 <template>
-  <input :class="classes" type="text" :value="modelValue" @input="onInput">
+  <div class="v-input-group">
+    <label for="input">{{ label }}</label>
+    <input :class="classes" type="password" :value="modelValue" @input="onInput">
+  </div>
 </template>
-
-<style scoped lang="scss">
-@use "src/style/variables" as variables;
-
-.v-input {
-  padding: 10px;
-  border: 1px solid variables.$primary-color;
-  border-radius: variables.$border-radius;
-  background: variables.$dark-color;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  width: 100%;
-}
-</style>

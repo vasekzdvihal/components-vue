@@ -1,0 +1,22 @@
+@use "src/style/variables" as variables;
+
+.v-input-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.v-input {
+  padding: 10px;
+  border: 1px solid variables.$primary-color;
+  border-radius: variables.$border-radius;
+  background: variables.$dark-color;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.v-input-group > label {
+  padding-left: 12px;
+  padding-bottom: 8px;
+  font-size: 16px;
+}

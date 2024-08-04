@@ -3,10 +3,14 @@ import VButton from "./components/base/v-button.vue";
 import { Variant } from "./common/VariantEnum.ts";
 import VTag from "./components/base/v-tag.vue";
 import VIcon from "./components/base/v-icon.vue";
-import VInput from "./components/base/v-input.vue";
+import VInputText from "./components/base/inputs/v-input-text.vue";
 import { ref } from "vue";
+import VInputNumber from "./components/base/inputs/v-input-number.vue";
+import VInputPassword from "./components/base/inputs/v-input-password.vue";
 
-const modelValue = ref("");
+const modelValueForStringInput = ref("");
+const modelValueForNumberInput = ref(0);
+const modelvalueForPasswordInput = ref("");
 </script>
 
 <template>
@@ -49,15 +53,23 @@ const modelValue = ref("");
   </div>
 
   <h3>v-input</h3>
-  <h4>Model value: {{ modelValue }}</h4>
-  <v-input v-model="modelValue" />
+  <div class="display-container column">
+    <v-input-text v-model="modelValueForStringInput" :label="`String model value: ${modelValueForStringInput}`" />
+    <v-input-number v-model="modelValueForNumberInput" :label="`Number model value: ${modelValueForNumberInput}`" />
+    <v-input-password v-model="modelvalueForPasswordInput" :label="`Password model value: ${modelvalueForPasswordInput}`" />
+  </div>
+
 </template>
 
 <style lang="scss">
 .display-container {
   display: flex;
   justify-content: center;
-  gap: 1em;
+  gap: 1rem;
   margin-top: 2em;
+}
+.display-container.column {
+  flex-direction: column;
+  align-items: center;
 }
 </style>
