@@ -3,14 +3,16 @@ import VButton from "./components/base/v-button.vue";
 import { Variant } from "./common/VariantEnum.ts";
 import VTag from "./components/base/v-tag.vue";
 import VIcon from "./components/base/v-icon.vue";
-import VInputText from "./components/base/inputs/v-input-text.vue";
+import VInputText from "./components/base/forms/v-input-text.vue";
 import { ref } from "vue";
-import VInputNumber from "./components/base/inputs/v-input-number.vue";
-import VInputPassword from "./components/base/inputs/v-input-password.vue";
+import VInputNumber from "./components/base/forms/v-input-number.vue";
+import VInputPassword from "./components/base/forms/v-input-password.vue";
+import VCheckbox from "./components/base/forms/v-checkbox.vue";
 
 const modelValueForStringInput = ref("");
 const modelValueForNumberInput = ref(0);
-const modelvalueForPasswordInput = ref("");
+const modelValueForPasswordInput = ref("");
+const modelValueForCheckbox = ref(false);
 </script>
 
 <template>
@@ -56,7 +58,12 @@ const modelvalueForPasswordInput = ref("");
   <div class="display-container column">
     <v-input-text v-model="modelValueForStringInput" :label="`String model value: ${modelValueForStringInput}`" />
     <v-input-number v-model="modelValueForNumberInput" :label="`Number model value: ${modelValueForNumberInput}`" />
-    <v-input-password v-model="modelvalueForPasswordInput" :label="`Password model value: ${modelvalueForPasswordInput}`" />
+    <v-input-password v-model="modelValueForPasswordInput" :label="`Password model value: ${modelValueForPasswordInput}`" />
+  </div>
+
+  <h3>v-checkbox</h3>
+  <div class="display-container column">
+    <v-checkbox v-model="modelValueForCheckbox" :label="`Checkbox model value: ${modelValueForCheckbox}`" />
   </div>
 
 </template>

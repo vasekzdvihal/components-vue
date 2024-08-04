@@ -11,7 +11,7 @@ defineProps({
   modelValue: {
     type: String,
     default: '',
-  }
+  },
 });
 
 function onInput(event: Event) {
@@ -21,16 +21,18 @@ function onInput(event: Event) {
 
 const classes = computed(() => {
   const result = ['v-input'];
-
   result.push('focusable');
-
   return result.join(' ');
 })
+
+const inputName = computed(() => {
+  return `input-${Math.random().toString(36).substring(7)}`;
+});
 </script>
 
 <template>
   <div class="v-input-group">
-    <label for="input">{{ label }}</label>
-    <input :class="classes" type="password" :value="modelValue" @input="onInput">
+    <label :for="inputName">{{ label }}</label>
+    <input :class="classes" :name="inputName" :aria-label="label" type="text" :value="modelValue" @input="onInput">
   </div>
 </template>

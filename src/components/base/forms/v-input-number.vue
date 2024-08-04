@@ -20,16 +20,18 @@ function onInput(event: Event) {
 
 const classes = computed(() => {
   const result = ['v-input'];
-
   result.push('focusable');
-
   return result.join(' ');
+});
+
+const inputName = computed(() => {
+  return `input-${Math.random().toString(36).substring(7)}`;
 });
 </script>
 
 <template>
   <div class="v-input-group">
-    <label for="input">{{ label }}</label>
-    <input :class="classes" type="number" :value="modelValue" @input="onInput" />
+    <label :for="inputName">{{ label }}</label>
+    <input :class="classes" :name="inputName" :aria-label="label" type="number" :value="modelValue" @input="onInput" />
   </div>
 </template>
